@@ -1,0 +1,15 @@
+#this property file is used by: com.hpeu.sparkStreaming.Producer.NewKafkaProducer
+bootstrap.servers=192.168.149.131:9092
+client.id=Producer1
+#acks:valid values could be:[all,-1,0,1]
+acks=1
+#retries:defautl value is 0;pls reference max.in.flight.requests.per.connection.
+retries=3
+#batch.size:the batch size helps performance on both client and server
+batch.size=16384
+#linger.ms:default value is 0;pls reference batch.size
+linger.ms=5
+key.serializer=org.apache.kafka.common.serialization.StringSerializer
+value.serializer=org.apache.kafka.common.serialization.StringSerializer
+#block.on.buffer.full is deperecated since 0.9.0 and removed in 0.11.0
+block.on.buffer.full=true

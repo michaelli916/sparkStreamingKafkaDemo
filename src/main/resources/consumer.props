@@ -1,0 +1,26 @@
+#this property file is the original Kafka 0.10.0 consumer configuration file
+#It is placed here only for reference,not used by any class in the project.
+bootstrap.servers=localhost:9092
+#group.id: which consumer group the consumer belongs to.
+group.id=ConsumerGroup1
+#auto.offset.reset: for 0.9.0 new JAVA API, values can be:[latest,earliest,none];for old API, values can be: [smallest, largest, anythingelse]
+auto.offset.reset=earliest
+#enable.auto.commit: for 0.9.0 new JAVA API use this to control if offset should be committed in the background
+enable.auto.commit=false
+#auto.commit.interval.ms:for new JAVA API in 0.9.0, default value 5000.see enable.auto.commit
+#auto.commit.interval.ms=5000
+
+#key.deserializer=org.apache.kafka.common.serialization.StringDeserializer
+#value.deserializer=org.apache.kafka.common.serialization.StringDeserializer
+
+#The timeout used to detect consumer failures when using Kafka's group management facility. The consumer sends periodic heartbeats to indicate its liveness to the broker.
+#session.timeout.ms=10000
+
+#The minimum amount of data the server should return for a fetch request. If insufficient data is available the request will wait for that much data to accumulate before answering the request. The default setting is 1 byte .
+#fetch.min.bytes=1
+#The size of the TCP receive buffer (SO_RCVBUF) to use when reading data. If the value is -1, the OS default will be used.
+#receive.buffer.bytes=262144
+#The maximum amount of data per-partition the server will return. Records are fetched in batches by the consumer.
+#max.partition.fetch.bytes=2097152
+#The maximum amount of data the server should return for a fetch request.Note that the consumer performs multiple fetches in parallel.
+#fetch.max.bytes=52428800
